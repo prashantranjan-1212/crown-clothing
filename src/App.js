@@ -1,16 +1,8 @@
-import { Routes, Route, Outlet } from "react-router-dom";
-import Home from "./routes/home/home.component";
+import { Routes, Route } from "react-router-dom";
 
-const Navigation = () => {
-	return (
-		<div>
-			<div>
-				<h3>I am navigation bar component</h3>
-			</div>
-			<Outlet />
-		</div>
-	);
-};
+import Navigation from "./routes/navigation/navigation.component";
+import Home from "./routes/home/home.component";
+import SignIn from "./routes/sign-in/sign-in.component";
 
 const Shop = () => {
 	return <h3>I am shop now component.</h3>;
@@ -30,6 +22,10 @@ const App = () => {
 				<Route
 					path="shop"
 					element={<Shop />}
+				/>
+				<Route
+					path="sign-in"
+					element={<SignIn />}
 				/>
 			</Route>
 		</Routes>
